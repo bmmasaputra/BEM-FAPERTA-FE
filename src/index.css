@@ -44,6 +44,12 @@ body {
   display: flex;
   min-width: 320px;
   overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 h1 {
@@ -362,7 +368,7 @@ button:focus-visible {
   align-items: center;
   height: 420px;
   padding: 43px 0px 43px 50px;
-  background-color:  #E3EDE9;
+  background-color: #e3ede9;
   justify-content: flex-end;
   border-radius: 50px 0px 0px 50px;
   box-shadow: 10px 0px 12.8px 0px rgba(0, 0, 0, 0.25) inset;
