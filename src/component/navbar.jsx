@@ -59,8 +59,10 @@ const styles = {
     justifyContent: "space-between",
     alignItems: "center",
     padding: "0px 63px",
-    backgroundColor: "#fff",
+    backgroundColor: "rgba(255, 255, 255, 0.85)",
+    backdropFilter: "blur(10px)",
     color: "#000",
+    zIndex: 1000,
   },
   logoContainer: {
     display: "flex",

@@ -4,7 +4,7 @@
   --text-color: rgb(0, 0, 0);
   --secondary-text-color: #ffffff;
   --background-color: #ffffff;
-  --primary-color: #0a9046;
+  --primary-color: #30a846;
   --secondary-color: #45ffb4;
   --border-color: white;
   --input-background: #22252e;
@@ -39,14 +39,15 @@ a:hover {
 body {
   margin: 0;
   margin-top: 100px;
-  margin-left: 63px;
-  margin-right: 63px;
+  /* margin-left: 63px;
+  margin-right: 63px; */
   display: flex;
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 84px;
   font-weight: 600;
   margin: 0;
   margin-top: 26px;
@@ -59,10 +60,34 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
 h5 {
   font-size: 18px;
   font-weight: 600;
   margin: 0;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 button {
@@ -85,6 +110,8 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* HERO START */
+
 .hero-container {
   display: flex;
   position: relative;
@@ -93,6 +120,8 @@ button:focus-visible {
   padding-left: 88px;
   width: calc(100dvw - 126px);
   height: calc(100dvh - 140px);
+  margin-left: 63px;
+  margin-right: 63px;
   color: var(--secondary-text-color);
 }
 
@@ -148,15 +177,203 @@ button:focus-visible {
 
 .curve-top {
   position: absolute;
-  top: -50px;
-  right: 0;
+  top: -49.5px;
+  right: -0.5px;
 }
 
 .curve-left {
   position: absolute;
-  bottom: 0;
-  left: -50px;
+  bottom: -0.5px;
+  left: -49.5px;
 }
+
+/* HERO END */
+/* GUBENUR & WAKIL START */
+
+.gubernur-container {
+  margin-top: 120px;
+  width: calc(100dvw - 126px);
+  display: grid;
+  /* gap: 50px; */
+  grid-template-columns: 400px 1fr 1fr 400px;
+  margin-left: 63px;
+  margin-right: 63px;
+}
+
+.gub-img-container,
+.wagub-img-container {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.gub-img-container img,
+.wagub-img-container img {
+  width: 90%;
+}
+
+.gub-img-container {
+  padding-right: 15px;
+  justify-content: end;
+}
+
+.wagub-img-container {
+  padding-left: 15px;
+  justify-content: start;
+}
+
+.text-highlight {
+  font-weight: 600;
+}
+
+.sambutan-wagub-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+}
+
+/* GUBERNUR & WAKIL END */
+/* VISI MISI START */
+
+.kabinet-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  width: calc(100dvw - 126px);
+  margin-top: 120px;
+  padding-left: 63px;
+  padding-right: 63px;
+  height: 582px;
+}
+
+.kabinet-logo-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  min-width: 406px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.kabinet-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  max-width: 406px;
+  min-height: 582px;
+  object-fit: cover;
+  border-radius: 50px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  filter: brightness(0.7) contrast(1.2);
+  z-index: -1;
+}
+
+.kabinet-logo {
+  width: 268px;
+}
+
+.kabinet-name {
+  font-size: 36px;
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+}
+
+.visi-misi {
+  margin-left: 47px;
+}
+
+.vimi {
+  font-size: 28px;
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.visi {
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.misi-list {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* VISI MISI END */
+/* DIVISION START */
+
+.division-container {
+  height: 400dvh;
+  width: calc(100dvw - 126px);
+  margin-top: 150px;
+  margin-bottom: 150px;
+  /* height: 420px; */
+  position: relative;
+  /* padding-left: 409px; */
+  display: flex;
+}
+
+.division-header {
+  top: 25dvh;
+  position: sticky;
+  height: 420px;
+  min-width: 470px !important;
+  padding-right: 50px;
+  padding-left: 63px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 100;
+  /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);   */
+  border-radius: 50px;
+}
+
+.division-header p {
+  margin: 0;
+}
+
+.division-header p:first-child {
+  font-size: 96px;
+  font-weight: bold;
+}
+
+.division-header p:last-child {
+  font-size: 48px;
+  font-weight: medium;
+}
+
+.division-list {
+  /* overflow: hidden; */
+  top: 25dvh;
+  position: sticky;
+  display: inline-flex;
+  align-items: center;
+  height: 420px;
+  padding: 43px 0px 43px 50px;
+  background-color:  #E3EDE9;
+  justify-content: flex-end;
+  border-radius: 50px 0px 0px 50px;
+  box-shadow: 10px 0px 12.8px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.division-card-container {
+  display: flex;
+  align-items: center;
+}
+
+/* DIVISION END */
 
 @media (prefers-color-scheme: light) {
   :root {
