@@ -76,7 +76,7 @@ const styles = {
     color: "white",
     padding: "31px 63px 25px 63px",
     textAlign: "center",
-    width: "100%",
+    width: "100dvw",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",

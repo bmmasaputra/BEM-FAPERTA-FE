@@ -1,22 +1,27 @@
 import React from "react";
+import { motion } from "framer-motion";
 import logo from "../assets/simple-kabinet.png";
-import { color } from "framer-motion";
 
 const DivisionCard = ({ division }) => {
-    return (
-      <div style={styles.card} className="division-card">
-        <img style={styles.logo} src={logo} alt="logo" />
-        <p style={styles.name}>{division.fullname}</p>
-        <p style={styles.description}>{division.description}</p>
-      </div>
-    );
-}
+  return (
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 300 }}
+      style={styles.card}
+      className="division-card"
+    >
+      <img style={styles.logo} src={logo} alt="logo" />
+      <p style={styles.name}>{division.fullname}</p>
+      <p style={styles.description}>{division.description}</p>
+    </motion.div>
+  );
+};
 
 const styles = {
   card: {
     display: "flex",
     flexDirection: "column",
-    backgroundColor: "#30A846",
+    backgroundColor: "#fff",
     borderRadius: "26px",
     width: "709px",
     boxShadow: "0px 4px 22px 2px rgba(0, 0, 0, 0.25)",
@@ -25,7 +30,7 @@ const styles = {
     marginRight: "50px",
     position: "relative",
     overflow: "hidden",
-    color: "white",
+    color: "black",
   },
   logo: {
     position: "absolute",

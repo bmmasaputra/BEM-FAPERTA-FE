@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/logo.png"; // Adjust the path as necessary
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
@@ -8,41 +9,56 @@ const Navbar = () => {
       <div style={styles.logoContainer}>
         <img src={logo} alt="Logo" style={styles.logo} />
         <div style={{ display: "flex", flexDirection: "column" }}>
-            <span style={styles.name}>BEM FAPERTA</span>
-            <span style={styles.name}>Universitas Andalas</span>
+          <span style={styles.name}>BEM FAPERTA</span>
+          <span style={styles.name}>Universitas Andalas</span>
         </div>
       </div>
       <ul style={styles.navLinks}>
-        <li style={styles.navItem}>
+        <motion.li
+          whileHover={{ scale: 1.1, fontWeight: "500" }}
+          transition={{ type: "spring", stiffness: 300 }}
+          style={styles.navItem}
+        >
           <Link to="/" style={styles.navLink}>
             Home
           </Link>
-        </li>
-        <li style={styles.navItem}>
-          <Link to="/ukm" style={styles.navLink}>
-            UKM
-          </Link>
-        </li>
-        <li style={styles.navItem}>
+        </motion.li>
+        <motion.li
+          whileHover={{ scale: 1.1, fontWeight: "500" }}
+          transition={{ type: "spring", stiffness: 300 }}
+          style={styles.navItem}
+        >
           <Link to="/artikel" style={styles.navLink}>
             Artikel
           </Link>
-        </li>
-        <li style={styles.navItem}>
+        </motion.li>
+        <motion.li
+          whileHover={{ scale: 1.1, fontWeight: "500" }}
+          transition={{ type: "spring", stiffness: 300 }}
+          style={styles.navItem}
+        >
           <Link to="/layanan" style={styles.navLink}>
             Layanan Mahasiswa
           </Link>
-        </li>
-        <li style={styles.navItem}>
+        </motion.li>
+        <motion.li
+          whileHover={{ scale: 1.1, fontWeight: "500" }}
+          transition={{ type: "spring", stiffness: 300 }}
+          style={styles.navItem}
+        >
           <Link to="/galeri" style={styles.navLink}>
             Galeri
           </Link>
-        </li>
-        <li style={styles.navItem}>
+        </motion.li>
+        <motion.li
+          whileHover={{ scale: 1.1, fontWeight: "500" }}
+          transition={{ type: "spring", stiffness: 300 }}
+          style={styles.navItem}
+        >
           <Link to="/kontak" style={styles.navLink}>
             Kontak
           </Link>
-        </li>
+        </motion.li>
       </ul>
     </nav>
   );
@@ -83,12 +99,13 @@ const styles = {
     padding: 0,
   },
   navItem: {
-    marginLeft: "20px",
+    marginLeft: "30px",
   },
   navLink: {
     color: "#000",
     textDecoration: "none",
-    fontSize: "16px",
+    fontSize: "18px",
+    fontWeight: "inherit",
   },
 };
 

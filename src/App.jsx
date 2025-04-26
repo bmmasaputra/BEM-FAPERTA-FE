@@ -14,7 +14,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Public />}>
           <Route index element={<Home />} />
-          <Route path="ukm" element={<Ukm />} />
           <Route path="artikel" element={<Artikel />} />
           <Route path="layanan" element={<Layanan />} />
           <Route path="galeri" element={<Galeri />} />
