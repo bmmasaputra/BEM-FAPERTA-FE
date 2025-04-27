@@ -30,7 +30,12 @@ const ArticleCard = ({ article }) => {
       <div style={styles.textContainer}>
         <h2 style={styles.title}>{article.title}</h2>
         <p style={styles.date}>
-          {new Date(article.created_at).toLocaleDateString()}
+          {new Date(article.created_at).toLocaleDateString("in-IN", {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })}
         </p>
         <p style={styles.description}>{article.content}</p>
         <a style={styles.link} href="https://example.com">
@@ -83,7 +88,7 @@ const styles = {
     fontSize: "14px",
     fontWeight: "regular",
     display: "-webkit-box",
-    WebkitLineClamp: 5,
+    WebkitLineClamp: 6,
     WebkitBoxOrient: "vertical",
     overflow: "hidden",
     textOverflow: "ellipsis",
