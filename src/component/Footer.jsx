@@ -4,6 +4,7 @@ import insta from "../assets/contact/icon/instagram.svg";
 import email from "../assets/contact/icon/email.svg";
 import phone from "../assets/contact/icon/phone.svg";
 import { Link } from "react-router-dom";
+import { color } from "framer-motion";
 
 const Footer = ({ profile }) => {
   return (
@@ -128,7 +129,8 @@ const styles = {
   },
   contactInfo: {
     fontSize: "18px",
-    fontWeight: "medium",
+    color: "white",
+    fontWeight: "500",
   },
   footerLinks: {
     display: "flex",

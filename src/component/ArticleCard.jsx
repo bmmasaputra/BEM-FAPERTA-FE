@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { link, object } from "framer-motion/client";
+import { useNavigate } from "react-router-dom";
 
 const ArticleCard = ({ article }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/artikel/${article.id}`);
+  };
 
   return (
     <motion.div
+      onClick={handleClick}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       whileHover={{
@@ -38,7 +44,7 @@ const ArticleCard = ({ article }) => {
           })}
         </p>
         <p style={styles.description}>{article.content}</p>
-        <a style={styles.link} href="https://example.com">
+        <a style={styles.link}>
           Baca Artikel
         </a>
       </div>
@@ -101,6 +107,7 @@ const styles = {
     color: "#2B48BD",
     textDecoration: "none",
     margin: "0",
+    cursor: "pointer",
   },
 };
 
