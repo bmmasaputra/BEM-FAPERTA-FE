@@ -31,6 +31,7 @@ const styles = {
     position: "relative",
     overflow: "hidden",
     color: "black",
+    cursor: "grabbing",
   },
   logo: {
     position: "absolute",

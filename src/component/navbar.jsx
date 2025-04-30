@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "../assets/logo.png"; // Adjust the path as necessary
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
+  const loc = useLocation();
+
+  const isActive = (path) => loc.pathname === path;
+
+  useEffect(() => {
+    console.log("Current Path:", loc.pathname);
+  }, [loc]);
+
   return (
     <nav style={styles.navbar}>
       <div style={styles.logoContainer}>
@@ -14,51 +22,36 @@ const Navbar = () => {
         </div>
       </div>
       <ul style={styles.navLinks}>
-        <motion.li
-          whileHover={{ scale: 1.1, fontWeight: "500" }}
-          transition={{ type: "spring", stiffness: 300 }}
-          style={styles.navItem}
-        >
-          <Link to="/" style={styles.navLink}>
-            Home
-          </Link>
-        </motion.li>
-        <motion.li
-          whileHover={{ scale: 1.1, fontWeight: "500" }}
-          transition={{ type: "spring", stiffness: 300 }}
-          style={styles.navItem}
-        >
-          <Link to="/artikel" style={styles.navLink}>
-            Artikel
-          </Link>
-        </motion.li>
-        <motion.li
-          whileHover={{ scale: 1.1, fontWeight: "500" }}
-          transition={{ type: "spring", stiffness: 300 }}
-          style={styles.navItem}
-        >
-          <Link to="/layanan" style={styles.navLink}>
-            Layanan Mahasiswa
-          </Link>
-        </motion.li>
-        <motion.li
-          whileHover={{ scale: 1.1, fontWeight: "500" }}
-          transition={{ type: "spring", stiffness: 300 }}
-          style={styles.navItem}
-        >
-          <Link to="/galeri" style={styles.navLink}>
-            Galeri
-          </Link>
-        </motion.li>
-        <motion.li
-          whileHover={{ scale: 1.1, fontWeight: "500" }}
-          transition={{ type: "spring", stiffness: 300 }}
-          style={styles.navItem}
-        >
-          <Link to="/kontak" style={styles.navLink}>
-            Kontak
-          </Link>
-        </motion.li>
+        {[
+          { to: "/", label: "Home" },
+          { to: "/artikel", label: "Artikel" },
+          { to: "/layanan", label: "Layanan Mahasiswa" },
+          { to: "/galeri", label: "Galeri" },
+          { to: "/kontak", label: "Kontak" },
+        ].map(({ to, label }) => {
+          const active = isActive(to);
+          return (
+            <motion.li
+              key={to}
+              whileHover={{ scale: 1.1 }}
+              animate={active ? { scale: 1.1 } : { scale: 1 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              style={{
+                ...styles.navItem,
+              }}
+            >
+              <Link
+                to={to}
+                style={{
+                  ...styles.navLink,
+                  fontWeight: active ? 500 : "normal",
+                }}
+              >
+                {label}
+              </Link>
+            </motion.li>
+          );
+        })}
       </ul>
     </nav>
   );
@@ -105,7 +98,7 @@ const styles = {
     color: "#000",
     textDecoration: "none",
     fontSize: "18px",
-    fontWeight: "inherit",
+    transition: "font-weight 0.2s ease",
   },
 };
 
