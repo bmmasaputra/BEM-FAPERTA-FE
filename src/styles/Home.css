@@ -1,4 +1,17 @@
 /* HERO START */
+.hero-container h1 {
+  font-size: 64px !important;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 26px;
+  margin-bottom: 30px;
+}
+
+.hero-container h2 {
+  font-size: 36px !important;
+  font-weight: 600;
+  margin: 0;
+}
 
 .hero-container {
   display: flex;
@@ -116,9 +129,18 @@
   font-weight: 600;
 }
 
+.sambutan-gub-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+}
+
 .sambutan-wagub-container {
   display: flex;
   flex-direction: column;
+  gap: 16px;
   justify-content: end;
   width: 100%;
   height: 100%;

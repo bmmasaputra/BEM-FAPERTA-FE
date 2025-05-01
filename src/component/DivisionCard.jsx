@@ -5,8 +5,8 @@ import logo from "../assets/simple-kabinet.png";
 const DivisionCard = ({ division }) => {
   return (
     <motion.div
-      whileHover={{ scale: 1.1 }}
-      transition={{ type: "spring", stiffness: 300 }}
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300, damping: 10 }}
       style={styles.card}
       className="division-card"
     >

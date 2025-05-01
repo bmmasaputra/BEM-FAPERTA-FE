@@ -5,8 +5,8 @@ import link from "../assets/icon/link.png";
 const UkmCard = ({ ukm }) => {
   return (
     <motion.a
-      whileHover={{ scale: 1.1 }}
-      transition={{ type: "spring", stiffness: 300 }}
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300, damping: 10 }}
       href={ukm.url_link}
       target="blank"
       style={styles.card}

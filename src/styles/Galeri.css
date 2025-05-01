@@ -1,0 +1,20 @@
+section {
+  width: calc(100dvw - 126px);
+}
+
+.image-grid {
+  column-count: 3;
+  column-gap: 10px;
+  width: 100%;
+}
+
+.image-card {
+  margin: 0;
+}
+
+.image-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin: 0;
+  margin-bottom: 10px;
+}
