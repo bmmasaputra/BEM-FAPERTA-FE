@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../assets/logo.png"; // Adjust the path as necessary
 import insta from "../assets/contact/icon/instagram.svg";
+import tiktok from "../assets/contact/icon/tiktok.svg";
+import youtube from "../assets/contact/icon/youtube.svg";
 import email from "../assets/contact/icon/email.svg";
 import phone from "../assets/contact/icon/phone.svg";
 import { Link } from "react-router-dom";
@@ -18,15 +20,25 @@ const Footer = ({ profile }) => {
             <p style={styles.contactHeader}>Hubungi Kami</p>
             <div style={styles.contact}>
               <img src={insta} style={styles.contactLogo} />
-              <span style={styles.contactInfo}>@bemfapertaunand</span>
+              <span style={styles.contactInfo}>@bemkmfpunand</span>
+            </div>
+            <div style={styles.contact}>
+              <img src={tiktok} style={styles.contactLogo} />
+              <span style={styles.contactInfo}>@bemkmfpunand</span>
+            </div>
+            <div style={styles.contact}>
+              <img src={youtube} style={styles.contactLogo} />
+              <span style={styles.contactInfo}>BEM KM FAPERTA UNAND</span>
             </div>
             <div style={styles.contact}>
               <img src={email} style={styles.contactLogo} />
-              <span style={styles.contactInfo}>bemfapertaunand@gmail.com</span>
+              <span style={styles.contactInfo}>unandbemkmfp@gmail.com</span>
             </div>
             <div style={styles.contact}>
               <img src={phone} style={styles.contactLogo} />
-              <span style={styles.contactInfo}>0813-3544-5455</span>
+              <span style={styles.contactInfo}>
+                085264694940 / 085265896124
+              </span>
             </div>
           </div>
         </div>

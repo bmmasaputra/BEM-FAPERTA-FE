@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "boxicons";
 import Swal from "sweetalert2";
 import insta from "../assets/contact/icon/instagram.svg";
+import tiktok from "../assets/contact/icon/tiktok.svg";
+import youtube from "../assets/contact/icon/youtube.svg";
 import email from "../assets/contact/icon/email.svg";
 import phone from "../assets/contact/icon/phone.svg";
 import "../styles/Kontak.css";
@@ -90,15 +92,48 @@ const Kontak = () => {
         <div style={{ marginBottom: "18px" }}>
           <div className="contact">
             <img src={insta} className="contact-logo" />
-            <span className="contact-info">@bemfapertaunand</span>
+            <span
+              className="contact-info"
+              style={{ fontWeight: 500, fontSize: "18px" }}
+            >
+              @bemkmfpunand
+            </span>
+          </div>
+          {/* <div className="contact">
+            <img src={tiktok} className="contact-logo" />
+            <span
+              className="contact-info"
+              style={{ fontWeight: 500, fontSize: "18px" }}
+            >
+              @bemkmfpunand
+            </span>
           </div>
           <div className="contact">
+            <img src={youtube} className="contact-logo" />
+            <span
+              className="contact-info"
+              style={{ fontWeight: 500, fontSize: "18px" }}
+            >
+              BEM KM FAPERTA UNAND
+            </span>
+          </div> */}
+          <div className="contact">
             <img src={email} className="contact-logo" />
-            <span className="contact-info">bemfapertaunand@gmail.com</span>
+            <span
+              className="contact-info"
+              style={{ fontWeight: 500, fontSize: "18px" }}
+            >
+              unandbemkmfp@gmail.com
+            </span>
           </div>
           <div className="contact">
             <img src={phone} className="contact-logo" />
-            <span className="contact-info">0813-3544-5455</span>
+            <span
+              className="contact-info"
+              style={{ fontWeight: 500, fontSize: "18px" }}
+            >
+              085264694940 / 085265896124
+            </span>
           </div>
         </div>
         <iframe

@@ -35,8 +35,9 @@ input {
 
 .contact {
     display: flex;
+    align-items: center;
     gap: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .form-group {
