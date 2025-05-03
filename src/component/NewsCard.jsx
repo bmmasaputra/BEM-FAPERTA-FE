@@ -15,22 +15,22 @@ const NewsCard = ({ newa: article }) => {
     const seconds = Math.floor((new Date() - new Date(date)) / 1000);
 
     let interval = seconds / 31536000;
-    if (interval >= 1) return Math.floor(interval) + " Tahun";
+    if (interval >= 1) return Math.floor(interval) + " Tahun yang lalu";
 
     interval = seconds / 2592000;
-    if (interval >= 1) return Math.floor(interval) + " Bulan";
+    if (interval >= 1) return Math.floor(interval) + " Bulan yang lalu";
 
     interval = seconds / 604800;
-    if (interval >= 1) return Math.floor(interval) + " Minggu";
+    if (interval >= 1) return Math.floor(interval) + " Minggu yang lalu";
 
     interval = seconds / 86400;
-    if (interval >= 1) return Math.floor(interval) + " Hari";
+    if (interval >= 1) return Math.floor(interval) + " Hari yang lalu";
 
     interval = seconds / 3600;
-    if (interval >= 1) return Math.floor(interval) + " Jam";
+    if (interval >= 1) return Math.floor(interval) + " Jam yang lalu";
 
     interval = seconds / 60;
-    if (interval >= 1) return Math.floor(interval) + " Menit";
+    if (interval >= 1) return Math.floor(interval) + " Menit yang lalu";
 
     return "Just now";
   };
@@ -58,7 +58,7 @@ const NewsCard = ({ newa: article }) => {
         src={article.thumbnail_url}
         alt="Article"
       />
-      <p style={styles.date}>{timeSince(article.created_at)} yang lalu</p>
+      <p style={styles.date}>{timeSince(article.created_at)}</p>
       <h2 style={styles.title}>{article.title}</h2>
     </motion.div>
   );

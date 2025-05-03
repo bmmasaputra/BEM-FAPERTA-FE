@@ -76,7 +76,7 @@ const ArtikelDetail = () => {
           />
         </div>
         <div className="news">
-          <h2 className="news-title">Artikel Terbaru</h2>
+          <h2 className="news-title" style={{marginBottom: "20px"}}>Artikel Terbaru</h2>
           {news.map((newa) => (
             <NewsCard key={newa.id} newa={newa} />
           ))}

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+import empty from "../assets/empty.png";
 import "../styles/Galeri.css";
 
 const URL = "http://localhost:3000/api/v1";
-const ALBUM_ID = "csHPJygB5rTfK3twZIOlX";
+const ALBUM_ID = "UIGcgfh8Nl7FpKFWhRkso";
 
 const SplashScreen = () => {
   return (
@@ -35,13 +36,22 @@ const Galeri = () => {
   return (
     <section className="galeri-container">
       <h1>Galeri</h1>
-      <div className="image-grid">
-        {images.map((image) => (
-          <div className="image-card" key={image.id}>
-            <img src={image.images.img_url} alt={image.images.name} />
+      {images.length > 0 ? (
+        <div className="image-grid">
+          {images.map((image) => (
+            <div className="image-card" key={image.id}>
+              <img src={image.images.img_url} alt={image.images.name} />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="empty-state">
+          <div>
+            <img src={empty} alt="No Articles" className="empty-image" />
+            <p className="empty-caption">Galeri Kosong</p>
           </div>
-        ))}
-      </div>
+        </div>
+      )}
     </section>
   );
 };

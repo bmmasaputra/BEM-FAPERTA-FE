@@ -195,7 +195,7 @@ const UkmSection = ({ ukms }) => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
 
   return (
     <div className="ukm-container" ref={targetRef}>
