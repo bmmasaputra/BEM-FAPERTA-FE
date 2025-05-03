@@ -1,0 +1,59 @@
+i, label {
+    color: #BFB1B1;
+    font-size: 32px;
+}
+
+.contact-section input, .contact-section textarea {
+    font-style: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background-color: #ffffff;
+    color: black;
+    padding-left: 50px;
+}
+
+input {
+    height: 50px;
+}
+
+.contact-section h1 {
+    font-size: 32px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    font-size: 20px;
+    margin-bottom: 33px;
+}
+
+.contact {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.form-group  i {
+ position: absolute;
+ top: 14px;
+ left: 12px;
+}
+
+form button {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    height: 50px;
+    background-color: var(--primary-color);
+}

@@ -99,6 +99,7 @@
   grid-template-columns: 400px 1fr 1fr 400px;
   margin-left: 63px;
   margin-right: 63px;
+  scroll-margin-top: 150px; 
 }
 
 .gub-img-container,

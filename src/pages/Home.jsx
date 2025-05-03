@@ -19,6 +19,7 @@ const Home = () => {
   const [profile, setProfile] = useState(null);
   const [divisions, setDivisions] = useState(null);
   const [ukms, setUkms] = useState(null);
+  const aboutRef = useRef(null);
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -69,7 +70,9 @@ const Home = () => {
         <div className="hero-content">
           <h2>Website Resmi</h2>
           <h1>BEM FAPERTA UNAND</h1>
-          <button>Tentang Kami</button>
+          <a href="#about">
+            <button>Tentang Kami</button>
+          </a>
         </div>
         <div className="cutout">
           <div className="stats-container">
@@ -104,7 +107,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="gubernur-container">
+      <div className="gubernur-container" ref={aboutRef} id="about">
         <div className="sambutan-gub-container">
           <h3>
             {profile.kabinet?.pengurus_kabinet_gubernur_idTopengurus?.fullname}
@@ -197,7 +200,10 @@ const UkmSection = ({ ukms }) => {
   return (
     <div className="ukm-container" ref={targetRef}>
       <div className="ukm-header">
-        <p><strong>U</strong>nit <strong>K</strong>egiatan <strong>M</strong>ahasiswa</p>
+        <p>
+          <strong>U</strong>nit <strong>K</strong>egiatan <strong>M</strong>
+          ahasiswa
+        </p>
       </div>
       <div className="ukm-list">
         <motion.div style={{ x }} className="ukm-card-container">
