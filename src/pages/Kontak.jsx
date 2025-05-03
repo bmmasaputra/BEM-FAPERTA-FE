@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "boxicons";
 import Swal from "sweetalert2";
-import insta from "../assets/contact/icon/instagram.svg";
-import tiktok from "../assets/contact/icon/tiktok.svg";
-import youtube from "../assets/contact/icon/youtube.svg";
-import email from "../assets/contact/icon/email.svg";
-import phone from "../assets/contact/icon/phone.svg";
+import insta from "../assets/contact/icon/Instagram.svg";
+// import tiktok from "../assets/contact/icon/tiktok.svg";
+// import youtube from "../assets/contact/icon/youtube.svg";
+import email from "../assets/contact/icon/Email.svg";
+import phone from "../assets/contact/icon/Phone.svg";
 import "../styles/Kontak.css";
 
 const URL = "https://bemfabe.vercel.app/api/v1";

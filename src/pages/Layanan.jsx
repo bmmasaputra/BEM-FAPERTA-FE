@@ -1,6 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import { motion, useTransform, useScroll } from "framer-motion";
-import ArticleCard from "../component/ArticleCard";
 import "../styles/Layanan.css";
 import survey from "../assets/icon/survey.png";
 

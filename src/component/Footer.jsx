@@ -1,10 +1,10 @@
 import React from "react";
 import logo from "../assets/logo.png"; // Adjust the path as necessary
-import insta from "../assets/contact/icon/instagram.svg";
-import tiktok from "../assets/contact/icon/tiktok.svg";
-import youtube from "../assets/contact/icon/youtube.svg";
-import email from "../assets/contact/icon/email.svg";
-import phone from "../assets/contact/icon/phone.svg";
+import insta from "../assets/contact/icon/Instagram.svg";
+import tiktok from "../assets/contact/icon/Tiktok.svg";
+import youtube from "../assets/contact/icon/Youtube.svg";
+import email from "../assets/contact/icon/Email.svg";
+import phone from "../assets/contact/icon/Phone.svg";
 import { Link } from "react-router-dom";
 import { color } from "framer-motion";
 
