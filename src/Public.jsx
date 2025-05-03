@@ -3,7 +3,7 @@ import Navbar from "./component/navbar";
 import Footer from "./component/Footer";
 import { Outlet } from "react-router-dom";
 
-const URL = "http://localhost:3000/api/v1";
+const URL = "https://bemfabe.vercel.app/api/v1";
 
 const SplashScreen = () => {
   return (

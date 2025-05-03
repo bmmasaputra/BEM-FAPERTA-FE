@@ -5,7 +5,7 @@ import "../styles/Artikel.css";
 import empty from "../assets/empty.png";
 
 
-const URL = "http://localhost:3000/api/v1";
+const URL = "https://bemfabe.vercel.app/api/v1";
 
 const SplashScreen = () => {
   return (

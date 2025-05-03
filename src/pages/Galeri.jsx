@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import empty from "../assets/empty.png";
 import "../styles/Galeri.css";
 
-const URL = "http://localhost:3000/api/v1";
+const URL = "https://bemfabe.vercel.app/api/v1";
 const ALBUM_ID = "UIGcgfh8Nl7FpKFWhRkso";
 
 const SplashScreen = () => {

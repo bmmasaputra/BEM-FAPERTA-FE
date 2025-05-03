@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/ArtikelDetail.css";
 import NewsCard from "../component/NewsCard";
 
-const URL = "http://localhost:3000/api/v1";
+const URL = "https://bemfabe.vercel.app/api/v1";
 
 const SplashScreen = () => {
   return (

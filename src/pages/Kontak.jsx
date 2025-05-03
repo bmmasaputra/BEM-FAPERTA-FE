@@ -8,7 +8,7 @@ import email from "../assets/contact/icon/email.svg";
 import phone from "../assets/contact/icon/phone.svg";
 import "../styles/Kontak.css";
 
-const URL = "http://localhost:3000/api/v1";
+const URL = "https://bemfabe.vercel.app/api/v1";
 
 const Kontak = () => {
   const [form, setForm] = useState({
