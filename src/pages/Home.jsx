@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
-import DivisionCard from "../component/divisionCard";
+import DivisionCard from "../component/DivisionCard";
 import UkmCard from "../component/UkmCard";
 import "../styles/Home.css"; // assuming animation CSS goes here
 
