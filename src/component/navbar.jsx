@@ -24,6 +24,7 @@ const Navbar = () => {
       <ul style={styles.navLinks}>
         {[
           { to: "/", label: "Home" },
+          { to: "/ukm", label: "UKM" },
           { to: "/artikel", label: "Artikel" },
           { to: "/layanan", label: "Layanan Mahasiswa" },
           { to: "/galeri", label: "Galeri" },

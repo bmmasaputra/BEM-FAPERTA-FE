@@ -20,6 +20,10 @@ h2 {
   gap: 64px;
 }
 
+.article-section h1 {
+  text-align: left;
+}
+
 .article {
   flex: 1;
   width: 100%;

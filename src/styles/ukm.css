@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+.ukm-section h1 {
+    margin-bottom: 60px;
+}
+
+.ukm-grid-container {
+    display: grid;
+    gap: 35px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}

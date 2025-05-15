@@ -18,7 +18,6 @@ const SplashScreen = () => {
 const Home = () => {
   const [profile, setProfile] = useState(null);
   const [divisions, setDivisions] = useState(null);
-  const [ukms, setUkms] = useState(null);
   const aboutRef = useRef(null);
 
   useEffect(() => {
@@ -42,22 +41,11 @@ const Home = () => {
       }
     };
 
-    const fetchUkms = async () => {
-      try {
-        const response = await fetch(`${URL}/ukm`);
-        const result = await response.json();
-        setUkms(result.data);
-      } catch (err) {
-        console.error("Failed to fetch profile:", err);
-      }
-    };
-
     fetchProfile();
     fetchDivisions();
-    fetchUkms();
   }, []);
 
-  if (!profile || !divisions || !ukms) return <SplashScreen />;
+  if (!profile || !divisions) return <SplashScreen />;
 
   return (
     <>
@@ -159,7 +147,6 @@ const Home = () => {
         </div>
       </div>
       <DivisionSection divisions={divisions} />
-      <UkmSection ukms={ukms} />
     </>
   );
 };
@@ -182,33 +169,6 @@ const DivisionSection = ({ divisions }) => {
         <motion.div style={{ x }} className="division-card-container">
           {divisions.map((division) => (
             <DivisionCard key={division.id} division={division} />
-          ))}
-        </motion.div>
-      </div>
-    </div>
-  );
-};
-
-const UkmSection = ({ ukms }) => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
-
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
-
-  return (
-    <div className="ukm-container" ref={targetRef}>
-      <div className="ukm-header">
-        <p>
-          <strong>U</strong>nit <strong>K</strong>egiatan <strong>M</strong>
-          ahasiswa
-        </p>
-      </div>
-      <div className="ukm-list">
-        <motion.div style={{ x }} className="ukm-card-container">
-          {ukms.map((ukm) => (
-            <UkmCard key={ukm.id} ukm={ukm} />
           ))}
         </motion.div>
       </div>

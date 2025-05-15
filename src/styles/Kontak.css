@@ -3,6 +3,10 @@ i, label {
     font-size: 32px;
 }
 
+.contact-section h1 {
+    text-align: left;
+}
+
 .contact-section input, .contact-section textarea {
     font-style: Montserrat;
     font-size: 18px;
