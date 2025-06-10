@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Ukm from "./pages/ukm";
+import Ukm from "./pages/Ukm";
 import Artikel from "./pages/Artikel";
 import ArtikelDetail from "./pages/ArticleDetail";
 import Layanan from "./pages/Layanan";
