@@ -43,10 +43,31 @@ const ArticleCard = ({ article }) => {
             year: "numeric",
           })}
         </p>
-        <p style={styles.description}>{article.content}</p>
-        <a style={styles.link}>
-          Baca Artikel
-        </a>
+        <p style={styles.description}>
+          {
+            // Strip HTML tags, decode entities, and add space after each element (including nested)
+            (() => {
+              const tempDiv = document.createElement("div");
+              tempDiv.innerHTML = article.content;
+
+              // Recursively add space after each element node
+              function addSpaceAfterElements(node) {
+                Array.from(node.childNodes).forEach((child) => {
+                  if (child.nodeType === 1) {
+                    // Element node
+                    addSpaceAfterElements(child); // Recurse
+                    child.after(document.createTextNode(" "));
+                  }
+                });
+              }
+              addSpaceAfterElements(tempDiv);
+
+              const text = tempDiv.textContent || tempDiv.innerText || "";
+              return text.replace(/\s+/g, " ").trim();
+            })()
+          }
+        </p>
+        <a style={styles.link}>Baca Artikel</a>
       </div>
     </motion.div>
   );

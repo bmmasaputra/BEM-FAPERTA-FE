@@ -78,7 +78,16 @@ const Footer = ({ profile }) => {
           </ul>
         </div>
       </div>
-      <p style={styles.copyright}>© 2025. All rights reserved.</p>
+      <p style={styles.copyright}>
+        <a
+          href="https://github.com/bmmasaputra"
+          target="_blank"
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          bmmasaputra{" "}
+        </a>
+        © 2025. All rights reserved.
+      </p>
     </footer>
   );
 };

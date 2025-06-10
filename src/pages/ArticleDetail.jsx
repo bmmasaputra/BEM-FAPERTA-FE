@@ -74,9 +74,68 @@ const ArtikelDetail = () => {
             className="content"
             dangerouslySetInnerHTML={{ __html: article.content }}
           />
+          <style>
+            {`
+              .content h1 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                margin: 1.2em 0 0.7em 0;
+                font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+                line-height: 1.2;
+              }
+              .content h2 {
+                font-size: 1.7rem;
+                font-weight: 600;
+                margin: 1.1em 0 0.6em 0;
+                font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+                line-height: 1.25;
+              }
+              .content h3 {
+                font-size: 1.3rem;
+                font-weight: 500;
+                margin: 1em 0 0.5em 0;
+                font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+                line-height: 1.3;
+              }
+              .content p {
+                margin: 0 0 1em 0;
+                font-size: 1rem;
+                font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+                color: #222;
+                line-height: 1.7;
+              }
+              .content b, .content strong {
+                font-weight: bold;
+              }
+              .content i, .content em {
+                font-style: italic;
+              }
+              .content u {
+                text-decoration: underline;
+              }
+              .content ul {
+                margin: 0 0 1em 1.5em;
+                padding-left: 1.2em;
+                list-style-type: disc;
+              }
+              .content ol {
+                margin: 0 0 1em 1.5em;
+                padding-left: 1.2em;
+                list-style-type: decimal;
+              }
+              .content li {
+                margin-bottom: 0.5em;
+                font-size: 1rem;
+                font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+                line-height: 1.7;
+              }
+            `}
+          </style>
         </div>
         <div className="news">
-          <h2 className="news-title" style={{marginBottom: "20px"}}>Artikel Terbaru</h2>
+          <h2 className="news-title" style={{ marginBottom: "20px" }}>
+            Artikel Terbaru
+          </h2>
           {news.map((newa) => (
             <NewsCard key={newa.id} newa={newa} />
           ))}

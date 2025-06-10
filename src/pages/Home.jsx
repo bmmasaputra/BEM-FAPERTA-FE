@@ -57,7 +57,7 @@ const Home = () => {
         />
         <div className="hero-content">
           <h2>Website Resmi</h2>
-          <h1>BEM FAPERTA UNAND</h1>
+          <h1 className="bem-name">BEM FAPERTA UNAND</h1>
           <a href="#about">
             <button>Tentang Kami</button>
           </a>

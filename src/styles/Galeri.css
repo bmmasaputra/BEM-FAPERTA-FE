@@ -21,12 +21,19 @@ section {
 
 .galeri-container .empty-state {
   display: flex;
-  width: 100dvw;
+  width: calc(100dvw - 126px)
   flex-direction: column !important;
   align-items: center;
   justify-content: center;
   padding: 40px;
   color: #777;
+}
+
+.empty-state {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .empty-image {
