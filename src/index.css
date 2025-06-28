@@ -53,6 +53,13 @@ body {
   -ms-overflow-style: none; /* IE 10+ */
 }
 
+@media (max-width: 900px) {
+  body {
+    margin-top: 80px;
+  }
+  
+}
+
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
