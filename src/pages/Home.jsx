@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import DivisionCard from "../component/DivisionCard";
+import MobileDivisionCard from "../component/MobileDivisionCard";
 import UkmCard from "../component/UkmCard";
 import "../styles/Home.css"; // assuming animation CSS goes here
 
@@ -18,6 +19,7 @@ const SplashScreen = () => {
 const Home = () => {
   const [profile, setProfile] = useState(null);
   const [divisions, setDivisions] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1200);
   const aboutRef = useRef(null);
 
   useEffect(() => {
@@ -43,6 +45,16 @@ const Home = () => {
 
     fetchProfile();
     fetchDivisions();
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1200);
+    };
+    
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   if (!profile || !divisions) return <SplashScreen />;
@@ -146,8 +158,30 @@ const Home = () => {
           ></div>
         </div>
       </div>
-      <DivisionSection divisions={divisions} />
+      {isMobile ? (
+        <MobileDivisionSection divisions={divisions} />
+      ):(
+        <DivisionSection divisions={divisions} />
+      )}
     </>
+  );
+};
+
+const MobileDivisionSection = ({ divisions }) => {
+  return (
+    <div className="m-division-container">
+      <div className="m-division-header">
+        <h2>Dinas & Biro</h2>
+        <h2>BEM FAPERTA UNAND</h2>
+      </div>
+      <div className="m-division-list">
+        <motion.div className="m-division-card-container">
+          {divisions.map((division) => (
+            <MobileDivisionCard key={division.id} division={division} />
+          ))}
+        </motion.div>
+      </div>
+    </div>
   );
 };
 
