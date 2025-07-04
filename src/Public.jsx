@@ -39,7 +39,7 @@ export default function Public() {
       <main>
         <Outlet />
       </main>
-      {/* <Footer profile={profile} /> */}
+      <Footer profile={profile} />
     </>
   );
 }

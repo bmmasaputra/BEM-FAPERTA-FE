@@ -819,7 +819,7 @@
   width: calc(100dvw - 126px);
   margin-left: 63px;
   margin-top: 80px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 .division-header {
@@ -931,7 +931,7 @@
     width: calc(100dvw - 40px);
     margin-left: 20px;
     margin-top: 50px;
-    margin-bottom: 150px;
+    margin-bottom: 80px;
   }
 
   .m-division-header {
