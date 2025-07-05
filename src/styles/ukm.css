@@ -1,13 +1,120 @@
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .ukm-section h1 {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .ukm-grid-container {
-    display: grid;
-    gap: 35px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid;
+  gap: 35px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media (max-width: 1200px) {
+  .ukm-grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .ukm-section h1 {
+    font-size: 28px;
+  }
+
+  .ukm_card {
+    height: 318px !important;
+  }
+
+  .ukm_logo {
+    height: 100px !important;
+  }
+
+  .ukm_description {
+    font-size: 16px !important;
+  }
+
+  .ukm_name {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .ukm-section h1 {
+    font-size: 24px;
+    margin-bottom: 46px;
+  }
+
+  .ukm-grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .ukm_card {
+    height: 278px !important;
+    padding: 20px 14px 20px 14px !important;
+    border-radius: 10px !important;
+  }
+
+  .ukm_logo {
+    height: 90px !important;
+  }
+
+  .ukm_description {
+    font-size: 14px !important;
+  }
+
+  .ukm_link {
+    height: 14px !important;
+    width: 14px !important;
+  }
+
+  .ukm_name {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .ukm-grid-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ukm_description {
+    font-size: 12px !important;
+  }
+
+  .ukm_card {
+    height: 268px !important;
+    padding: 20px 14px 20px 14px !important;
+    border-radius: 10px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .ukm-grid-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .ukm_logo {
+    height: 80px !important;
+  }
+
+  .ukm_description {
+    font-size: 12px !important;
+  }
+
+  .ukm_card {
+    height: 262px !important;
+    padding: 20px 14px 20px 14px !important;
+    border-radius: 10px !important;
+  }
+
+  section {
+    margin: 0px 20px 80px 20px !important;
+    width: calc(100dvw - 40px) !important;
+  }
 }

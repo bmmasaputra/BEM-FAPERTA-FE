@@ -955,7 +955,7 @@
 
 /* DIVISION END */
 /* UKM START */
-.ukm-container {
+/* .ukm-container {
   height: 200dvh;
   width: calc(100dvw - 126px);
   margin-bottom: 150px;
@@ -989,7 +989,7 @@
   display: inline-flex;
   align-items: center;
   height: 304px;
-  /* width: calc(100dvw - 501px); */
+  width: calc(100dvw - 501px);
   padding: 43px 0px 43px 50px;
   background-color: #e3ede9;
   justify-content: flex-start;
@@ -1000,7 +1000,7 @@
 .ukm-card-container {
   display: flex;
   align-items: center;
-}
+} */
 
 @keyframes spin {
   to {
