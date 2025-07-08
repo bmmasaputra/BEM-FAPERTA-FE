@@ -25,39 +25,118 @@ p {
 a {
   font-size: 18px;
   font-weight: 500;
-  color: #2B48BD;
+  color: #2b48bd;
   text-decoration: none;
 }
 
 .layanan-list {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .layanan-card {
-    display: flex;
-    align-items: center;
-    padding: 34px 56px 34px 56px;
-    gap: 56px;
-    width: 984px;
-    background-color: #e3ede9;
-    border-radius: 20px;
-    box-shadow: 0px 0px 12.8px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  padding: 34px 56px 34px 56px;
+  gap: 56px;
+  width: 984px;
+  background-color: #e3ede9;
+  border-radius: 20px;
+  box-shadow: 0px 0px 12.8px 0px rgba(0, 0, 0, 0.25);
 }
 
 .layanan-card img {
-    width: 94px;
+  width: 94px;
 }
 
 .layanan-content {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
 }
 
 .cta-list {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 1100px) {
+  .layanan-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .layanan-card {
+    padding: 20px 20px 20px 20px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .layanan-content h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .layanan-content p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .layanan-content a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2b48bd;
+    text-decoration: none;
+  }
+
+  .cta-list {
     display: flex;
     gap: 20px;
+  }
+
+  .layanan-container {
+    margin-bottom: 80px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .layanan-content h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .layanan-content p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .layanan-content a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2b48bd;
+    text-decoration: none;
+  }
+
+  .cta-list {
+    display: flex;
+    gap: 20px;
+  }
+
+  .layanan-card img {
+    display: none;
+  }  
+}
+
+@media (max-width: 500px) {
+  .layanan-container h1 {
+    font-size: 24px;
+  }
 }
