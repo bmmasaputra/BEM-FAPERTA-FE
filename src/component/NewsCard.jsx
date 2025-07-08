@@ -45,7 +45,7 @@ const NewsCard = ({ newa: article }) => {
       }}
       transition={{ type: "spring", stiffness: 300 }}
       style={styles.card}
-      className="article-card"
+      className="news-card"
     >
       <motion.img
         animate={{
@@ -55,6 +55,7 @@ const NewsCard = ({ newa: article }) => {
         }}
         transition={{ type: "spring", stiffness: 300 }}
         style={styles.image}
+        className="news-image"
         src={article.thumbnail_url}
         alt="Article"
       />
@@ -75,7 +76,7 @@ const styles = {
     color: "black",
   },
   image: {
-    width: "400px",
+    width: "100%",
     height: "204px",
     objectFit: "cover",
     borderRadius: "10px",
@@ -87,7 +88,7 @@ const styles = {
     margin: "0",
   },
   title: {
-    fontSize: "20px",
+    fontSize: "18px",
     fontWeight: "600",
     display: "-webkit-box",
     WebkitLineClamp: 3,

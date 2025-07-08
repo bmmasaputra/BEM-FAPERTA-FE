@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/ArticleCard.css"
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
@@ -30,12 +31,15 @@ const ArticleCard = ({ article }) => {
         }}
         transition={{ type: "spring", stiffness: 300 }}
         style={styles.image}
+        className="article_image"
         src={article.thumbnail_url}
         alt="Article"
       />
-      <div style={styles.textContainer}>
-        <h2 style={styles.title}>{article.title}</h2>
-        <p style={styles.date}>
+      <div style={styles.textContainer} className="article_textContainer">
+        <h2 style={styles.title} className="article_title">
+          {article.title}
+        </h2>
+        <p style={styles.date} className="article_date">
           {new Date(article.created_at).toLocaleDateString("in-IN", {
             weekday: "long",
             day: "numeric",
@@ -43,7 +47,7 @@ const ArticleCard = ({ article }) => {
             year: "numeric",
           })}
         </p>
-        <p style={styles.description}>
+        <p style={styles.description} className="article_description">
           {
             // Strip HTML tags, decode entities, and add space after each element (including nested)
             (() => {
@@ -67,7 +71,7 @@ const ArticleCard = ({ article }) => {
             })()
           }
         </p>
-        <a style={styles.link}>Baca Artikel</a>
+        <a style={styles.link} className="article_link">Baca Artikel</a>
       </div>
     </motion.div>
   );
@@ -84,7 +88,6 @@ const styles = {
     borderRadius: "8px",
   },
   image: {
-    width: "420px",
     height: "246px",
     objectFit: "cover",
     borderRadius: "8px",
@@ -115,7 +118,7 @@ const styles = {
     fontSize: "14px",
     fontWeight: "regular",
     display: "-webkit-box",
-    WebkitLineClamp: 6,
+    WebkitLineClamp: 5,
     WebkitBoxOrient: "vertical",
     overflow: "hidden",
     textOverflow: "ellipsis",

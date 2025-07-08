@@ -136,9 +136,11 @@ const ArtikelDetail = () => {
           <h2 className="news-title" style={{ marginBottom: "20px" }}>
             Artikel Terbaru
           </h2>
-          {news.map((newa) => (
-            <NewsCard key={newa.id} newa={newa} />
-          ))}
+          <div className="news-list">
+            {news.map((newa) => (
+              <NewsCard key={newa.id} newa={newa} />
+            ))}
+          </div>
         </div>
       </section>
     </>
