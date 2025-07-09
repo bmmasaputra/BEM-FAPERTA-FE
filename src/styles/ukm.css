@@ -18,7 +18,7 @@ h1 {
     gap: 20px;
   }
 
-  .ukm-section h1 {
+  .ukm-section h1, .galeri-container h1 {
     font-size: 28px;
   }
 
