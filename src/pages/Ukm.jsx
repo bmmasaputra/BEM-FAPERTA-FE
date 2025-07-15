@@ -9,7 +9,8 @@ const SplashScreen = () => {
   return (
     <div className="splash-screen">
       <div className="spinner" />
-      <h2>Loading BEM FAPERTA UNAND...</h2>
+      <h2>BEM FAPERTA UNAND</h2>
+      <p>LOADING...</p>
     </div>
   );
 };
