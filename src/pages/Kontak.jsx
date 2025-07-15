@@ -151,7 +151,8 @@ const Kontak = () => {
         className="contact-form"
         onSubmit={handleSubmit}
         style={{
-          width: "680px",
+          // width: "680px",
+          flex: 1,
           display: "flex",
           flexDirection: "column",
           backgroundColor: "#E3EDE9",

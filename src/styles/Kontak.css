@@ -1,4 +1,4 @@
-i, label {
+    i, label {
     color: #BFB1B1;
     font-size: 32px;
 }
@@ -61,4 +61,72 @@ form button {
     color: white;
     height: 50px;
     background-color: var(--primary-color);
+}
+
+@media (max-width: 1400px) {
+    .contact-section p {
+        font-size: 18px;
+        margin-bottom: 23px;
+    }
+
+    iframe {
+        height: 380px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .contact-section p {
+        font-size: 16px;
+        margin-bottom: 23px;
+    }
+    
+    .contact-info {
+        font-size: 16px !important;
+    }
+
+    iframe {
+        height: 370px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .contact-section {
+        flex-direction: column;
+        align-items: center !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-section {
+        margin-top: 26px !important;
+    }
+
+    .contact-section p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .contact-section h1 {
+        font-size: 24px;
+        margin: 0;
+        margin-bottom: 15px;
+    }  
+
+    iframe {
+        margin-top: 20px;
+        height: 360px !important;
+    }
+
+    .name-group {
+        flex-direction: column;
+        gap: 0px !important;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .contact-form textarea {
+        height: 120px !important;
+    }
 }
